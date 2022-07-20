@@ -1,13 +1,12 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-
-app.get("/api/cources", (req, res) => {
-  res.send([1, 2, 3]);
-});
+ 
+app.get('/', (req, res) => {
+  res
+    .status(200)
+    .send('Hello server is running')
+    .end();
+})
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
